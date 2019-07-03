@@ -1,6 +1,16 @@
 //Debemos lograr mostrar un mensaje al presionar el botón  'mostrar'.
 function mostrar()
 {
-	alert("ok");
+	
+	
+	alert("esto funciona de maravilla"); //ventana
+
+	/*
+
+	hola
+
+	/*
+
+
 }
 

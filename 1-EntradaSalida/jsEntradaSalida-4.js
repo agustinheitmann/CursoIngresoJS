@@ -5,5 +5,8 @@
 function mostrar()
 {
 
+	var dato;
+	dato= prompt('agustin')
+	document.getElementById ('agustin').value=dato
 }
 
