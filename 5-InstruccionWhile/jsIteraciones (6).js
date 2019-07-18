@@ -10,7 +10,14 @@ function mostrar()
 	{
 		numero=prompt("pedir numeros");
 		
-		numero=parseInt(numero)
+		numero=parseInt(numero);
+
+		while(isNaN(numero))
+
+		{
+			numero=prompt("Valor incorrecto")
+			numero=parseInt(numero);
+		}
 
 		contador++;
 
@@ -18,12 +25,6 @@ function mostrar()
 
 		promedio=acumulador/contador;
 	}
-
-
-
-
-
-
 
 document.getElementById('suma').value=acumulador;
 document.getElementById('promedio').value=acumulador/5;
