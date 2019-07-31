@@ -1,8 +1,14 @@
 function mostrar()
 {
 
-var repetciones = prompt("ingrese el número de repeticiones");
+    var repeticiones=prompt("Ingrese numeros");
+    var i;
 
+    for(i=0; i<=repeticiones; i++)
+        
+        {
+            alert("UTN FRA");
+        }
 
 
 }//FIN DE LA FUNCIÓN
