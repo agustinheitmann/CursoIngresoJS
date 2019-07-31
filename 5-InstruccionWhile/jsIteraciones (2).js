@@ -1,6 +1,6 @@
 function mostrar()
 {
-	var contador;contador=11;
+  /* var contador;contador=11;
 
 	while(contador>0)
 
@@ -9,5 +9,16 @@ function mostrar()
 		alert(contador);
 		console.log(contador);
 	}
+	*/
 
-}//FIN DE LA FUNCIÓN
+	var contador=11;
+
+	do
+		{
+			contador--;
+			alert(contador);
+		} 
+		
+	while(contador>0);		
+}
+//FIN DE LA FUNCIÓN
