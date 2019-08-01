@@ -1,7 +1,7 @@
 function mostrar()
 {
 
-	var contador;
+	var contador=0;
 	var acumulador=0;
 	var respuesta="si";
 	var numero;
@@ -9,6 +9,7 @@ function mostrar()
 	while(respuesta=="si")
 
 		{
+			
 			numero=prompt("Tomar numeros");
 			numero=parseInt(numero);
 
@@ -18,16 +19,14 @@ function mostrar()
 					numero=parseInt(numero);	
 				}
 
-			contador++;
-			acumulador+=numero;
+		contador++;
+		acumulador+=numero;
 
-
-		var acumulada=document.getElementsById('suma')=acumulada;
-		var promedio=document.getElementById('promedio')=promedio;
-
-		respuesta=prompt("Desea poner otro numero")
+		respuesta=prompt("Desea poner otro numero");
 		}
 		 
+		document.getElementById('suma').value=acumulador;
+		document.getElementById('promedio').value=acumulador/contador;
 
 
 }//FIN DE LA FUNCIÓN
