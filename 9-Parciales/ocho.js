@@ -1,114 +1,99 @@
 function mostrar()
 {
-    var numero;
+   
     var letra;
-    var numeropar=0;
-    var numeroinpar=0;
-    var cantidadceros=0;
-    var promediopositivos=0;
-    var sumapositivos=0;
+    var numero;
+    var numpar=0;
+    var numinpar=0;
+    var cantceros=0;
+    var promediopositivos=0;   
     var sumanegativos=0;
-    var NumeroMaximo=-101;
-    var numeroMinimo=101;
-    var letraMaxima;
-    var letraMinimo;
-    var cantidadpositivos=0;
-    var cantidadnegativos=0;
+    var cantpositivos=0;
+    var cantnegativos=0;
+    var numeromax=0;
+    var letramax;
+    var letramin;
+    var numeromin=100;
     var respuesta="si";
-
-
+    var sumanumeros=0;
+    
 
         while(respuesta=="si")
 
             {
                 
-                letra=prompt("Ingresar letra");
+                letra=prompt("Ingrese un letra");
                 
                 while(letra.length!=1)
                     {
                         letra=prompt("Ingrese un solo digito");
                     }
-                
-                numero=prompt("Ingresar numero");
-                numero=parseInt(numero);
 
-                while(isNaN(numero) || numero<-100 || numero>100)
+                numero=prompt("Ingrese un numero del -100 al 100");
+                numero=parseInt(numero);
+                
+                    while(isNaN(numero) || numero<=-101 || numero>=101)
                     {
-                        numero=prompt("Ingrese un numero valido")
+                        numero=prompt("Ingrese un numero valido");
                         numero=parseInt(numero);
                     }
             
                 if(numero%2==0)
-                    
                     {
-                        numeropar++;
+                        numpar++;
                     }
-
                 else
-
                     {
-                        numeroinpar++;
+                        numinpar++;
                     }
-                    
+                
                 if(numero=="0")
-    
                     {
-                        cantidadceros++;
+                        cantceros++;
                     }
-                    
+
                 if(numero>0)
-
                     {
-                        sumapositivos+=numero;
-                        cantidadpositivos++
+                        sumanumeros+=numero;
+                        cantpositivos++;
+                        promediopositivos=sumanumeros/cantpositivos;
                     }
-    
-                else
 
+                else
                     {
                         sumanegativos+=numero;
-                        cantidadnegativos++;
+                        
                     }
             
-                if(numero>NumeroMaximo)
 
+                if(numero>numeromax)
                     {
-                        NumeroMaximo=numero;
-                        letraMaxima=letra;
+                        numeromax=numero;
+                        letramax=letra;
                     }
-            
+                
                 else
-
+                {
+                    if(numero<numeromin)
                     {
-                        numeroMinimo=numero;
-                        letraMinimo=letra;
+                        numeromin=numero;
+                        letramin=letra;
                     }
-    
-            promediopositivos=sumapositivos/cantidadpositivos;
+                }
 
-            respuesta=prompt("Desea ingresar otro numero?");
-            respuesta=prompt("Desea ingresar otra letra?");
-     
+              
+
+                respuesta=prompt("Desea ingresar otra letra?");
+                respuesta=prompt("Desea ingresar otro numero?");
+                respuesta = respuesta.toLowerCase();
             }
 
-        
-            document.write("Numeros pares son "+numeropar+"<br>");
-            
-            document.write("Numeros impares " +numeroinpar+"<br>");
-            
-            document.write("Cantidad de ceros " +cantidadceros+"<br>");
-            
-            document.write("El promedio de lo positivos es  "+promediopositivos+"<br>");
-            
-            document.write("La suma del numero negativo es " +cantidadnegativos+"<br>");
-            
-            document.write("El numero maximo es  " +NumeroMaximo+ " y la letra maxima es "+letraMaxima+"<br>" );
-            
-            document.write("El numero minimo es  " +numeroMinimo+ " y la letra minima es "+letraMinimo+"<br>" );
-
-
-
-
-
+            document.write("La cantidad de numeros pares es "+numpar + "<br>");
+            document.write("La cantidad de numeros impares es " +numinpar + "<br>") ;
+            document.write("La cantidad de ceros es "+cantceros + "<br>");
+            document.write("El promedio de todos los positivos es "+promediopositivos+ "<br>");
+            document.write("La suma de todos los negativos es "+sumanegativos+ "<br>");
+            document.write("El numero maximo es "+numeromax+ " y su letra es "+letramax+ "<br>");
+            document.write("El numero minimo es "+numeromin+ " y su letra es "+letramin+ "<br>")
 
 }
